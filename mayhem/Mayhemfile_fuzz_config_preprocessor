@@ -1,0 +1,11 @@
+project: savantenvs/mcrouter
+target: fuzz-config-preprocessor
+
+cmds:
+  - cmd: /mayhem/fuzz_config_preprocessor
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-config-preprocessor/testsuite

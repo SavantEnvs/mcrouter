@@ -1,0 +1,5 @@
+get a b c d e f
+cas k 0 0 1 77
+x
+lease-set k 123 0 0 2
+hi

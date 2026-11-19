@@ -1,0 +1,9 @@
+ÿset key 5 0 3
+abc
+delete key
+incr n 5
+lease-get x
+metaget y
+touch t 10
+version
+quit

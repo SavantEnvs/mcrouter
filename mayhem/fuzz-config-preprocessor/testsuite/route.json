@@ -1,0 +1,8 @@
+// mcrouter-style routing config
+{
+  "macros": { "pfx": { "type": "macroDef", "params": ["name"], "result": "PoolRoute|%name%" } },
+  "consts": [ { "type": "constDef", "name": "port", "result": 5000 } ],
+  "pools": { "A": { "servers": [ "localhost:@int(%port%)" ] }, "B": "@import(pool)" },
+  "route": "@pfx(A)",
+  "x": { "type": "if", "condition": "@equals(%service%,memcache)", "is_true": "@str(yes)", "is_false": 1 }
+}
